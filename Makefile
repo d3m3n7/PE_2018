@@ -84,7 +84,7 @@ MOU_LOGS:
 	./save_the_logs <ayy.ayy >shell_test.sh
 clean:
 	rm *.o	
-	rm *.loG
+	rm *.log
 
 
 fclean:
