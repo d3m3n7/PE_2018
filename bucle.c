@@ -116,12 +116,12 @@ int main (int argc, char *argv[])
 		exit(-1);
 	}
 	waitpid(-1,NULL,0);
-	pid = fork();
+	/*pid = fork();
 	if (pid == 0) {
 		execlp ("make", "make","rm", (char *) NULL);
 		exit(-1);
 	}
-	waitpid(-1,NULL,0);
+	waitpid(-1,NULL,0);*/
 	exit(1);
 }
 
