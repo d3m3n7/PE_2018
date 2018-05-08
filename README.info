@@ -1,7 +1,25 @@
 ********************************************************
+WHAT  IS  AN  EXPERIMENT  ???
 
-HOW TO GENERATE MULTIPLE EXPERIMENTS:
+Each experiment consists of 1 vector of random size [0,1000000].
 
+This vector is the input of the MergeSort and QuickSort
+algorithms and the time used is saved on
+the corresponding timeM.log and timeQ.log files.
+
+After each sorting the output of each algorithm is checked
+to see it's an ascending vector.
+
+The previous process is repeated 2 more times until we have
+3 times saved on the timeM.log and timeQ.log.
+
+The average of this 3 times is what we call an experiment.
+
+LOG_M.log and LOG_Q.log contain those averages.
+
+**********************************************************
+
+HOW TO  GENERATE  MULTIPLE  EXPERIMENTS ???
 
   1 -   GENERATE A.OUT FOM BUCLE.C
         @:~$ gcc bucle.c
@@ -11,6 +29,9 @@ HOW TO GENERATE MULTIPLE EXPERIMENTS:
   
   3 -   AFTER 10 EXPERIMENTS ALL .log FILES WILL BE IN 
         THE LATEST FOLDER LOCATED IN THE 'REGISTRE' FOLDER
+       
+        THE DATA ON .log FILES CONSISTS OF 3 COLUMNS:
+        / time [ms] / seed / vector_size /
      
   4 -   DELETING ALL .inp, .out, .txt AFTER EXPERIENCE
         @:~$ make rm
